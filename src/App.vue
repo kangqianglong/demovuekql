@@ -2,7 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    <h1>这是一个测试标签</h1>
+    <h1>分布式系统前端框架vue3.0</h1>
 
     <router-link to="/about">分页</router-link><br />
     <router-link to="/home">主页</router-link><br />

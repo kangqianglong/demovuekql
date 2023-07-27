@@ -2,8 +2,8 @@
   <div id="item">
 <!--    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
 <!--    <script src="JS/vue.js"></script>-->
-    <h1>这是about21分页</h1>
-    <button @click="sub">分页按钮的都</button>
+    <h1>你已经进入springboot后台数据传输页面</h1>
+    <button @click="sub">请不要点击此处</button>
 <!--    <ul>-->
 <!--      <li v-for="n in names" :key="n.id">{{n}}</li>-->
 <!--      <li v-for="i in ids" :key="i.id">{{i}}</li>-->
@@ -18,7 +18,7 @@
           {{ dataItem }}
         </li>
       </ul>
-      <h2> 康强龙 测试</h2>
+      <h2> 分布式架构前后端分离，前端vue3.0，后端springboot，制作人：康强龙</h2>
       <p>{{ stringDate }}</p>
     </ul>
   </div>

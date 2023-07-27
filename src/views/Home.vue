@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <h1>这里是HOME分页</h1>
+    <h1>这里目前没有什么数据获取——BY  康强龙</h1>
 
   </div>
 </template>
