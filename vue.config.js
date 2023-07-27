@@ -1,5 +1,13 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
+  //基本路径
+  publicPath: './',//默认的'/'是绝对路径，如果不确定在根路径，改成相对路径'./'
+  // 输出文件目录
+  outputDir: 'dist',
+  assetsDir: 'static',
+  parallel:false,
+  indexPath: 'index.html',
+
   devServer: {
     proxy: {
       '/api': {    //这里的/api表示的意思是以/api开头的才生效 ->刷下面的重点
@@ -33,3 +41,4 @@ module.exports = defineConfig({
 //   transpileDependencies: true,
 //   lintOnSave:false
 // }
+
