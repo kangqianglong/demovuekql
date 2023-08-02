@@ -14,11 +14,13 @@
 <!--        <h2> 康强龙 测试</h2>-->
 <!--      </li>-->
       <ul>
+        <h2> 我是从后端获取的数据库信息：</h2>
         <li v-for="dataItem in arrayDate " :key="dataItem.id">
           {{ dataItem }}
         </li>
       </ul>
       <h2> 分布式架构前后端分离，前端vue3.0，后端springboot，制作人：康强龙</h2>
+      <h2> 我是从后端获取的数据信息：</h2>
       <p>{{ stringDate }}</p>
     </ul>
   </div>
@@ -79,7 +81,7 @@ mounted() {
       // }
 
       axios
-          .get('http://127.0.0.1:8181/home/index')
+          .get('http://182.92.210.145:8181/home/index')
           .then(response => {
             //alert("111");
             // 从响应中获取数据
@@ -94,7 +96,7 @@ mounted() {
     },
     getData2: function () {
       axios
-          .get('http://127.0.0.1:8181/home/index1')
+          .get('http://182.92.210.145:8181/home/index1')
           .then(response => {
             // 从响应中获取数据
             this.arrayDate= response.data;
