@@ -47,6 +47,9 @@
 
 import { test2 } from "@/api/about";
 import axios from "axios";
+axios.defaults.baseURL = '/api'  //自动附加在所有axios请求前面，则可以省略/api，直接写'/xxxx/xxx'。否则需要设置'/api/xxxx/xxx'
+//设置axios请求的地址默认是'/api',这样根据第一步中配置的会将/api替换为目标主机地址
+
 export default {
 data() {
   return {
@@ -81,7 +84,8 @@ mounted() {
       // }
 
       axios
-          .get('http://182.92.210.145:8181/home/index')
+          //.get('http://127.0.0.1:8181/home/index')
+          .get('home/index')
           .then(response => {
             //alert("111");
             // 从响应中获取数据
@@ -91,12 +95,13 @@ mounted() {
           })
           .catch(error => {
             console.error(error);
-            alert('访问后台失败，网络错误，不能访问');
+            alert('访问后台失败，阿里云服务器网络错误，不能访问');
           });
     },
     getData2: function () {
       axios
-          .get('http://182.92.210.145:8181/home/index1')
+          //.get('http://127.0.0.1:8181/home/index1')
+          .get('home/index1')
           .then(response => {
             // 从响应中获取数据
             this.arrayDate= response.data;
@@ -105,7 +110,7 @@ mounted() {
           })
           .catch(error => {
             console.error(error);
-            alert('访问后台失败，网络错误，不能访问');
+            alert('访问后台失败，阿里云服务器网络错误，不能访问');
           });
     },
   },

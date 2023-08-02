@@ -9,6 +9,9 @@ module.exports = defineConfig({
   indexPath: 'index.html',
 
   devServer: {
+    //open:true,
+    //host: 'http://10.3.21.138',//主机IP地址
+    //port:8080,
     proxy: {
       '/api': {    //这里的/api表示的意思是以/api开头的才生效 ->刷下面的重点
         target: "http://182.92.210.145:8181",//springboot项目的阿里云服务器地址和端口
