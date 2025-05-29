@@ -1,6 +1,17 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+
+// main.js
+import BaseCard from './views/BaseCard.vue'; // 导入新名称
+Vue.component('BaseCard', BaseCard); // 全局注册新名称
+//Vue.use(BaseCard)
+
+import dayjs from 'dayjs'
+Vue.use(dayjs);
+
+
+
 import axios from 'axios'
 import VueAxios from 'vue-axios'; //npm i axios vue-axios
 
@@ -22,4 +33,5 @@ new Vue({
   render: h => h(App),
   router,
 }).$mount('#app')
+
 

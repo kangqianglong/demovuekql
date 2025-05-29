@@ -1,0 +1,12 @@
+server {
+    listen 80;
+    server_name _;
+    
+    root /usr/share/nginx/html;
+    index index.html;
+    
+    # 处理Vue路由（history模式）
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}

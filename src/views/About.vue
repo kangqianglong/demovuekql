@@ -85,7 +85,9 @@ mounted() {
 
       axios
           //.get('http://127.0.0.1:8181/home/index')
-          .get('home/index')
+         // .get('home/index')
+          .get('/shiro/system2/about2/studentAll')
+
           .then(response => {
             //alert("111");
             // 从响应中获取数据
@@ -101,7 +103,8 @@ mounted() {
     getData2: function () {
       axios
           //.get('http://127.0.0.1:8181/home/index1')
-          .get('home/index1')
+          //.get('home/index1')
+          .get('/shiro/system2/about2/test221')
           .then(response => {
             // 从响应中获取数据
             this.arrayDate= response.data;
